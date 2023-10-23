@@ -45,4 +45,14 @@ public class AcervoWS {
         return lista;
     }
 
+    public Album cadastrarAlbum(
+            @WebParam(name = "nome") String nome,
+            @WebParam(name = "produtoras") String produtoras,
+            @WebParam(name = "ano") int ano) {
+        Album album = new Album(nome, produtoras, ano);
+        acervo.addAlbum(album);
+        return album;
+    }
+
+
 }
